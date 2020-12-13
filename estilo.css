@@ -1,0 +1,232 @@
+:root{
+    font-size: 62.5%;
+    --main-bg-color: #8257B9; /*Cor de fundo principal*/
+    --buttom-bg-color-primary: #47E539;
+    --buttom-bg-color-secundary: #868AF9;
+    --text-color-primary: #ffffff;
+    --text-color-secundary: #000000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    box-sizing: border-box;
+    background-color: var(--main-bg-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+.container-principal{
+    padding-left: 7vw;
+    padding-right: 7vw;
+    color: var(--text-color-primary);
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*Duas colunas*/
+        grid-template-rows: 70vh 30vh; /*Duas linhas*/
+        grid-template-areas: "logo img"
+                             "buttom users" ;
+}
+
+.container-logo{
+    grid-area: logo;
+    padding-top: 12.5vh;
+}
+
+.container-img{
+    grid-area: img;
+    padding-top: 5vh;
+    justify-self: end;
+}
+.container-img img{
+    
+    max-width: 43vw;
+    max-height: 65vh;
+}
+
+.container-entre{
+    grid-area: buttom;
+    padding-left: 5px;
+	align-self: center;
+        
+}
+
+.container-usuarios{
+    grid-area: users;
+    display: grid;
+    text-align: center;
+    justify-content: right;
+    align-items: center;
+    padding-right: 2.5vw;
+    font-size: 1.4rem;
+    font-weight: lighter;
+}
+
+.logo{
+    font-size: 9.6rem;
+    font-family: 'Saira Stencil One', cursive;
+    font-weight: 400;
+}
+
+.texto-logo{
+    font-size: 1.8rem;
+    font-weight: 600;
+    max-width: 70%;
+    margin-left: 0px;
+}
+
+.buttom-home-primary{
+    background-color: var(--buttom-bg-color-primary);
+    font-size: 1.8rem;
+    font-weight: bold;
+    height: 70px;
+    width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    float: left;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.buttom-home-secundary{
+    background-color: var(--buttom-bg-color-secundary);
+    font-size: 1.8rem;
+    font-weight: bold;
+    height: 70px;
+    width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/*Tablet - (iPad Pro)*/
+@media only screen and (max-width: 1024px) {
+    /* For mobile phones: */
+    :root{
+        font-size: 62%;
+    }
+
+    .container-principal{
+        padding-left: 7vw;
+        padding-right: 7vw;
+        color: var(--text-color-primary);
+        display: grid;
+        grid-template-columns: 1fr; /*Duas colunas*/
+        grid-template-rows: 40vh 22.5vh 22.5vh 15vh;
+        grid-template-areas: "logo"
+                             "img"
+                             "buttom"
+                             "users";
+    }
+    
+    .container-img{
+        grid-area: img;
+        padding-top: 0vh;
+        justify-self: center;
+        align-self: center;
+        
+    }
+    .container-img img{
+        max-width: 86vw;
+        max-height: 25vh;
+        display: grid;
+        align-self: center;
+        justify-self: center;
+    }
+    
+    .container-entre{
+        grid-area: buttom;
+        padding-left: 0px;
+        justify-self: center;
+        align-self: center;
+        
+    }
+    
+    .container-usuarios{
+        grid-area: users;
+        display: grid;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding-right: 2.5vw;
+        font-size: 1.4rem;
+        font-weight: lighter;
+    }
+    
+    .logo{
+        font-size: 9.6rem;
+        font-family: 'Saira Stencil One', cursive;
+        font-weight: 400;
+        text-align: center;
+    }
+    
+    .texto-logo{
+        max-width: 100%;
+        margin-left: 0px;
+        text-align: center;
+    }
+    
+    
+    
+}
+
+/*Tablet - Default*/
+@media only screen and (max-width: 768px) {
+    :root{
+        font-size: 55%;
+    }    
+}
+
+
+/*Mobile L*/
+@media only screen and (max-width: 550px) {
+    .container-logo{
+        padding-top: 5vh;
+    }
+
+    .buttom-home-primary{
+        height: 60px;
+        width: 160px;
+        margin: 0px 0px 1vh 0px;
+      
+    }
+
+    .buttom-home-secundary{
+        height: 60px;
+        width: 160px;
+        clear: both;
+      
+     }
+}
+
+/*Mobile M*/
+@media only screen and (max-width: 375px) {
+    :root{
+        font-size: 45%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    :root{
+        font-size: 40%;
+    }
+
+    .buttom-home-primary{
+        height: 50px;
+        width: 150px;
+        margin: 0px 0px 1vh 0px;
+        
+    }
+
+    .buttom-home-secundary{
+        height: 50px;
+        width: 150px;
+        clear: both;
+      
+    }
+}
